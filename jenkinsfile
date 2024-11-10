@@ -7,17 +7,13 @@ pipeline{
                 sh 'echo "Execultando o comando Docker Build"'
             }
         }
-    }
 
-    stages{
         stage('Push no Docker Image'){
             steps{
                 sh 'echo "Execultando o comando Docker push"'
             }
         }
-    }
 
-    stages{
         stage('Deploy no Kubernates'){
             steps{
                 sh 'echo "Execultando o comando kubctl apply"'
